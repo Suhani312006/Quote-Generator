@@ -36,7 +36,7 @@ const quotes = {
   let currentQuote = {};
   let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
   
-  // Function to load quote from selected category
+  
   function getCategoryQuote(category) {
     currentCategory = category;
     currentQuoteIndex = 0;
@@ -44,13 +44,13 @@ const quotes = {
     displayQuote(currentQuote);
   }
   
-  // Function to display the quote
+  
   function displayQuote(quote) {
     document.getElementById("quote-text").textContent = `"${quote.text}"`;
     document.getElementById("quote-author").textContent = `- ${quote.author}`;
   }
   
-  // Generate a new random quote when the "New Quote" button is clicked
+  
   function newQuote() {
     const randomCategory = Object.keys(quotes)[Math.floor(Math.random() * Object.keys(quotes).length)];
     const randomQuoteIndex = Math.floor(Math.random() * quotes[randomCategory].length);
@@ -58,7 +58,7 @@ const quotes = {
     displayQuote(currentQuote);
   }
   
-  // Function to add quote to favorites
+  
   function addFavorite() {
     if (!favorites.some(fav => fav.text === currentQuote.text && fav.author === currentQuote.author)) {
       favorites.push(currentQuote);
@@ -69,7 +69,7 @@ const quotes = {
     }
   }
   
-  // Function to share the quote on social media
+  
   function shareQuote(platform) {
     const url = encodeURIComponent(window.location.href);
     const quote = encodeURIComponent(`${currentQuote.text} - ${currentQuote.author}`);
@@ -87,7 +87,7 @@ const quotes = {
     window.open(shareURL, "_blank");
   }
   
-  // Load favorite quotes on the favorites page
+  
   if (window.location.pathname.includes("favorites.html")) {
     const favoritesList = document.getElementById("favorites-list");
     favorites.forEach((fav, index) => {
@@ -98,11 +98,11 @@ const quotes = {
     });
   }
   
-  // Function to remove quote from favorites
+  
   function removeFavorite(index) {
     favorites.splice(index, 1);
     localStorage.setItem("favorites", JSON.stringify(favorites));
-    window.location.reload(); // Refresh the page to update the list
+    window.location.reload(); 
   }
   
   // Initial quote display
