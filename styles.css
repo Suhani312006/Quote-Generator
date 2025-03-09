@@ -1,4 +1,4 @@
-/* Reset and layout settings */
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +16,7 @@ body {
   justify-content: center;
 }
 
-/* Navbar styling */
+
 .navbar {
   position: absolute;
   top: 20px;
@@ -42,7 +42,7 @@ body {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-/* Quote Box Styling */
+
 .quote-container {
   
   display: flex;
@@ -106,7 +106,7 @@ button:hover {
 }
 
 #share-buttons button {
-  background-color: #FF8C00; /* Updated color */
+  background-color: #FF8C00; 
 }
 
 #share-buttons button:hover {
@@ -129,7 +129,7 @@ button:hover {
   margin-top: 50px;
 }
 
-/* Favorite Quote Button */
+
 #favorite-btn {
   background-color: #FF6347;
   color: white;
@@ -141,7 +141,7 @@ button:hover {
   background-color: #e53e31;
 }
 
-/* Style for remove button */
+
 .remove-favorite {
   background-color: #dc3545;
   color: white;
