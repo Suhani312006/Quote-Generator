@@ -15,6 +15,6 @@ Quote Generator is a simple and interactive website that allows users to generat
 - **HTML**: The structure and content of the website.
 - **CSS**: Styling for the website layout, including responsiveness and interactive button styles.
 - **JavaScript**: Used for functionality like quote generation, favorite management, and social media sharing.
-- **LocalStorage**: Used to store favorite quotes on the user's device.
+
 
 
